@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Todo App</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: #f5f6fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .todo-container {
+      background: #fff;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #2f3640;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    .input-section {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    input[type="text"] {
+      flex: 1;
+      padding: 10px 15px;
+      border: 2px solid #dcdde1;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    input[type="text"]:focus {
+      border-color: #273c75;
+      outline: none;
+    }
+
+    button.add-btn {
+      padding: 10px 15px;
+      background: #273c75;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button.add-btn:hover {
+      background: #192a56;
+    }
+
+    ul.todo-list {
+      list-style: none;
+    }
+
+    ul.todo-list li {
+      background: #f1f2f6;
+      margin-bottom: 10px;
+      padding: 10px 15px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.3s ease;
+    }
+
+    ul.todo-list li button.delete-btn {
+      background: #e84118;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 5px 10px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background 0.3s ease;
+    }
+
+    ul.todo-list li button.delete-btn:hover {
+      background: #c23616;
+    }
+  </style>
+
+</head>
+<body>
+
+  <div class="todo-container">
+    <h2>My Todo List</h2>
+    <div class="input-section">
+      <input type="text" placeholder="Enter your task" id="todo-input">
+      <button class="add-btn">Add</button>
+    </div>
+    <ul class="todo-list">
+      <!-- Todo items will appear here -->
+      <li>Sample Task <button class="delete-btn">Delete</button></li>
+    </ul>
+  </div>
+
+  <script src="todos.js"></script>
+
+</body>
+</html>
